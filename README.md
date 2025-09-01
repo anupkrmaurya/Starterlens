@@ -1,29 +1,64 @@
-# Eye Diseases Classification 👁️
-The early detection of eye diseases is essential for preserving vision and preventing further damage. Many eye diseases, such as diabetic retinopathy and glaucoma can have few or no symptoms in their early stages. By the time symptoms appear, the disease may have progressed to a point where it is much harder to treat. Early detection also provides an opportunity to start appropriate treatment that can help manage the condition and prevent vision loss. Consequently, early detection of these diseases is so crucial because people can lose their vision.
+# 👁️ Eye Diseases Classification
 
-## Dataset
-The dataset consists of Normal, Diabetic Retinopathy, Cataract, and Glaucoma retinal images, where each class has approximately 1000 images. These images are collected from various sources like IDRiD, Oculur recognition, HRF, etc.
-The dataset can be downloaded here: https://www.kaggle.com/datasets/gunavenkatdoddi/eye-diseases-classification
+### Deep Learning-based Eye Disease Detection & AI Assistant
 
-### Examples:
+This project provides an end-to-end workflow for retinal disease detection using a CNN in PyTorch. It also includes an expert advice assistant powered by OpenRouter Gemini LLM, accessible through a user-friendly Streamlit web application.
 
-**Cataracts**: Cataracts are a common age-related condition in which the lens of the eye becomes cloudy, causing blurry vision and sensitivity to light. Surgery is the most common treatment for cataracts.  
+---
 
-<img src="https://github.com/SinaRaoufi/Eye-Diseases-Classification/blob/master/samples/cataract.jpg" width="128" height="128" />
+## Features
 
-**Diabetic Retinopathy**: Diabetic Retinopathy is a complication of diabetes that affects the retina and can lead to vision loss. High blood sugar levels can damage blood vessels in the retina and cause them to leak or swell, leading to vision problems.
+- **Multi-class Eye Disease Detection:**  
+  Classifies retinal images as **Normal, Cataract, Diabetic Retinopathy, or Glaucoma**.
 
-<img src="https://github.com/SinaRaoufi/Eye-Diseases-Classification/blob/master/samples/diabetic_retinopathy.jpeg" width="128" height="128" />
+- **Interactive Web Application:**  
+  Upload an image, detect disease, and get personalized advice using [Streamlit](https://streamlit.io).
 
-**Glaucoma**: Glaucoma is a group of eye diseases that can damage the optic nerve and lead to vision loss. It is often caused by increased pressure in the eye, although not all cases of glaucoma have elevated eye pressure. Early detection and treatment are important in preventing vision loss from glaucoma, which has no cure.
+- **Expert Assistant:**  
+  Ask queries and get instant, contextual medical guidance via Gemini LLM, integrated with your diagnosis.
 
-<img src="https://github.com/SinaRaoufi/Eye-Diseases-Classification/blob/master/samples/glaucoma.jpg" width="128" height="128" />
+- **Easy Extensibility:**  
+  Ready for new data, further model training, or other LLM integrations.
 
-**Normal**
+---
 
-<img src="https://github.com/SinaRaoufi/Eye-Diseases-Classification/blob/master/samples/normal.jpg" width="128" height="128" />
+## Getting Started
 
+1. **Clone the Repo**
+    ```
+    git clone https://github.com/your-username/eye-diseases-classification.git
+    cd eye-diseases-classification
+    ```
 
+2. **Install Requirements**
+    ```
+    pip install -r requirements.txt
+    ```
+    *You may need:*
+    - `torch`
+    - `torchvision`
+    - `streamlit`
+    - `pillow`
+    - `requests`
 
-## Model
-For this classification, I use a Convolutional neural network (CNN) which is made of convolution stages (Conv2d, ReLU, MaxPool2d) and a fully connected layer at the end.
+3. **Train or Download Model**
+    - Place your trained model as `eye_detection_model.pkl` in the root directory.
+
+4. **Run the App**
+    ```
+    streamlit run streamlit_app.py
+    ```
+
+---
+
+## Usage
+
+- Upload a retinal JPG or PNG image.
+- Click "Detect Eyes" to get the classification result.
+- Enter any symptoms or questions for the AI expert assistant.
+- View answers in separate panels and ask follow-up questions.
+
+---
+
+## Files and Structure
+
