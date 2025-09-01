@@ -26,7 +26,7 @@ This project provides an end-to-end workflow for retinal disease detection using
 
 1. **Clone the Repo**
     ```
-    git clone https://github.com/your-username/eye-diseases-classification.git
+    git clone [https://github.com/your-username/eye-diseases-classification.git](https://github.com/anupkrmaurya/Starterlens.git)
     cd eye-diseases-classification
     ```
 
