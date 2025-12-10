@@ -56,7 +56,7 @@ preprocess = transforms.Compose([
 ])
 
 # --- OpenRouter API ---
-API_KEY = "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"
+API_KEY = "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"
 MODEL_NAME = "google/gemini-2.0-flash-001"
 API_URL = "https://openrouter.ai/api/v1/chat/completions"
 
